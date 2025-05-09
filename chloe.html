@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Locked Message</title>
+</head>
+<body>
+  <div id="message"></div>
+
+  <script>
+    const releaseDate = new Date("2025-06-01T00:00:00"); // Set unlock date
+    const now = new Date();
+    const msgDiv = document.getElementById("message");
+
+    if (now >= releaseDate) {
+      msgDiv.innerHTML = "🎉 Hey! You made it to the future. Here's my message: <br><br>Stay awesome, and never stop chasing your dreams!";
+    } else {
+      msgDiv.innerHTML = "⏳ This message will unlock on June 1, 2025. Check back then!";
+    }
+  </script>
+</body>
+</html>
